@@ -1,0 +1,331 @@
+/* --------------------------
+   ESTILOS GERAIS
+---------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --------------------------
+   HEADER / MENU
+---------------------------*/
+header {
+    background-color: #0052cc;
+    padding: 20px 0;
+}
+
+.container-header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #e60023;
+}
+
+/* --------------------------
+   CATALOGO DE CAMISAS
+---------------------------*/
+.catalogo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 250px; /* Ajuste de tamanho das imagens */
+    object-fit: contain; /* Mantém proporção sem cortar */
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.card p {
+    font-weight: bold;
+    color: #e60000;
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* --------------------------
+   DESTAQUES DA SEMANA
+---------------------------*/
+.destaques {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.destaques h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.destaques-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-destaque {
+    background-color: white;
+    border: 2px solid #ff9900;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-destaque img {
+    width: 100%;
+    height: 200px; /* Ajuste de tamanho das imagens */
+    object-fit: contain; /* Mantém proporção sem cortar */
+    border-radius: 5px;
+}
+
+.card-destaque h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.card-destaque p {
+    font-weight: bold;
+    color: #e65c00;
+    margin-bottom: 10px;
+}
+
+.card-destaque button {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.card-destaque button:hover {
+    background-color: #cc7a00;
+    transform: scale(1.05);
+}
+
+/* --------------------------
+   DETALHE DA CAMISA
+---------------------------*/
+.detalhe-produto img {
+    width: 300px; /* Tamanho fixo para imagens de detalhe */
+    height: 300px; /* Mantém proporção uniforme */
+    object-fit: contain; /* Não corta a imagem */
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* --------------------------
+   RODAPÉ
+---------------------------*/
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .redes-sociais a {
+    color: #ff9900;
+    margin: 0 5px;
+    transition: color 0.2s;
+}
+
+footer .redes-sociais a:hover {
+    color: white;
+}
+
+/* --------------------------
+   RESPONSIVO
+---------------------------*/
+@media (max-width: 768px) {
+    .catalogo, .destaques-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .detalhe-produto img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* --------------------------
+   BANNER PRINCIPAL
+---------------------------*/
+.banner-principal {
+    background-image: url('../img/banner.jpg'); /* Coloque sua imagem de banner aqui */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-conteudo h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.banner-conteudo p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.btn-banner {
+    background-color: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-banner:hover {
+    background-color: #cc7a00;
+    transform: scale(1.05);
+}
+/* --------------------------
+   CATALOGO DE CAMISAS
+---------------------------*/
+.catalogo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;       /* Tamanho padrão das imagens do catálogo */
+    object-fit: contain;  /* Mantém proporção sem cortar */
+    border-radius: 5px;
+}
+
+/* --------------------------
+   DETALHE DA CAMISA
+---------------------------*/
+.detalhes-img {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.detalhes-img img {
+    width: 300px;       /* Tamanho padrão para detalhe */
+    height: 300px;
+    object-fit: contain; /* Mantém proporção */
+    border-radius: 5px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .detalhes-img img {
+        width: 90%;
+        height: auto;
+    }
+}
+
